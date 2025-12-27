@@ -2,6 +2,8 @@
 
 A Raycast extension that displays keyboard shortcuts and cheatsheets from a markdown file directly in Raycast's interface.
 
+![Keyboardy Screenshot](assets/screenshot.png)
+
 ## Features
 
 - **Search shortcuts** across all applications and categories
