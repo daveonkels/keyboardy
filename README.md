@@ -1,6 +1,6 @@
 # Keyboardy
 
-A Raycast extension that displays keyboard shortcuts and cheatsheets from a markdown file directly in Raycast's interface.
+A [Raycast](https://raycast.com) extension that displays keyboard shortcuts and cheatsheets from a markdown file directly in Raycast's interface.
 
 ![Keyboardy Screenshot](assets/screenshot.png)
 
@@ -13,6 +13,13 @@ A Raycast extension that displays keyboard shortcuts and cheatsheets from a mark
 - **Flexible path support** with tilde (~) expansion for home directory
 
 ## Installation
+
+### Prerequisites
+
+- [Download Raycast](https://raycast.com/download) (macOS only)
+- Node.js (v20+ recommended)
+
+### Setup
 
 1. Clone this repository
 2. Install dependencies:
@@ -78,10 +85,7 @@ The extension supports two markdown formats: standard markdown and Obsidian call
 
 ## Development
 
-### Prerequisites
-
-- Node.js (v20+ recommended)
-- Raycast installed
+For more information on building Raycast extensions, see the [Raycast Developer Documentation](https://developers.raycast.com).
 
 ### Scripts
 
