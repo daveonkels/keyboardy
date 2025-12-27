@@ -25,8 +25,8 @@ export function parseCheatsheet(filePath: string): Section[] {
     }
     if (inFrontmatter) continue;
 
-    // Match section headers: > [!IMPORTANT] AppName
-    const sectionMatch = line.match(/^>\s*\[!IMPORTANT\]\s*(.+)$/);
+    // Match section headers: > [!IMPORTANT] AppName OR ## AppName
+    const sectionMatch = line.match(/^>\s*\[!IMPORTANT\]\s*(.+)$/) || line.match(/^##\s+(.+)$/);
     if (sectionMatch) {
       if (currentSection) {
         sections.push(currentSection);
@@ -36,8 +36,8 @@ export function parseCheatsheet(filePath: string): Section[] {
       continue;
     }
 
-    // Match subsection headers: > **Subsection Name**
-    const subsectionMatch = line.match(/^>\s*\*\*(.+)\*\*$/);
+    // Match subsection headers: > **Subsection Name** OR ### Subsection Name
+    const subsectionMatch = line.match(/^>\s*\*\*(.+)\*\*$/) || line.match(/^###\s+(.+)$/);
     if (subsectionMatch) {
       currentSubsection = subsectionMatch[1].trim();
       continue;

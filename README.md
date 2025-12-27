@@ -32,40 +32,49 @@ After installing, configure the extension in Raycast preferences:
 
 ## Markdown Format
 
-The extension parses markdown files with a specific structure using callout syntax:
+The extension supports two markdown formats: standard markdown and Obsidian callout syntax.
+
+### Standard Markdown (Recommended)
 
 ```markdown
----
-# Optional YAML frontmatter (will be skipped)
----
+## Application Name
 
+### Navigation
+| Key | Description |
+| --- | --- |
+| Cmd+K | Command palette |
+| Cmd+P | Quick open file |
+
+### Editing
+| Key | Description |
+| --- | --- |
+| Cmd+Z | Undo |
+| Cmd+Shift+Z | Redo |
+
+## Another App
+
+| Key | Description |
+| --- | --- |
+| Ctrl+A | Select all |
+```
+
+### Obsidian Callout Syntax
+
+```markdown
 > [!IMPORTANT] Application Name
-> | Key | Description |
-> | --- | --- |
-> | Cmd+K | Command palette |
-> | Cmd+P | Quick open file |
-
-> [!IMPORTANT] Another App
 > **Navigation**
 > | Key | Description |
 > | --- | --- |
-> | Ctrl+A | Select all |
-> | Ctrl+E | End of line |
->
-> **Editing**
-> | Key | Description |
-> | --- | --- |
-> | Cmd+Z | Undo |
-> | Cmd+Shift+Z | Redo |
+> | Cmd+K | Command palette |
 ```
 
 ### Format Rules
 
-| Element | Syntax | Example |
-|---------|--------|---------|
-| Section Header | `> [!IMPORTANT] Name` | `> [!IMPORTANT] VS Code` |
-| Subsection | `> **Name**` | `> **Navigation**` |
-| Shortcut Row | `> \| Key \| Description \|` | `> \| Cmd+K \| Open command palette \|` |
+| Element | Standard Markdown | Obsidian Callout |
+|---------|-------------------|------------------|
+| Section | `## Name` | `> [!IMPORTANT] Name` |
+| Subsection | `### Name` | `> **Name**` |
+| Shortcut Row | `\| Key \| Description \|` | `> \| Key \| Description \|` |
 
 ## Development
 
