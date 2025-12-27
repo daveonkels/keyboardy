@@ -1,0 +1,43 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "keyboard-shortcuts",
+  "title": "Keyboard Shortcuts",
+  "description": "View keyboard shortcuts cheatsheet from Obsidian",
+  "icon": "command-icon.png",
+  "author": "daveonkels",
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "index",
+      "title": "View Keyboard Shortcuts",
+      "description": "Display keyboard shortcuts by app",
+      "mode": "view"
+    }
+  ],
+  "preferences": [
+    {
+      "name": "cheatsheetPath",
+      "type": "file",
+      "required": true,
+      "title": "Cheatsheet File",
+      "description": "Path to your markdown cheatsheet file"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.83.0"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^1.0.11",
+    "@types/node": "22.5.4",
+    "@types/react": "18.3.3",
+    "eslint": "^8.57.0",
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.4"
+  },
+  "scripts": {
+    "build": "ray build --skip-types -e dist -o dist",
+    "dev": "ray develop",
+    "lint": "ray lint",
+    "fix-lint": "ray lint --fix"
+  }
+}
